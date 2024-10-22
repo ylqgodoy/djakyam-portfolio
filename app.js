@@ -55,7 +55,7 @@ app.get('/events', (req, res) => {
       date: '23 de Novembro de 2024',
       location: 'Lindoia, SP',
       description: 'Baile exclusivo e organizado pela Dj Akyam.',
-      image: '/images/event.jpg',
+      image: '/images/release.jpg',
       link: '#',
     },
   ];
