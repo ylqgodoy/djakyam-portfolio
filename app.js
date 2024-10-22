@@ -51,18 +51,10 @@ app.get('/gallery', (req, res) => {
 app.get('/events', (req, res) => {
   const events = [
     {
-      title: 'UP Formaturas',
-      date: '13 de Outubro de 2024',
-      location: 'Florianópolis, SC',
-      description: 'Festas fechadas exclusivamente para formandos, com as melhores atrações, atividades e muitos passeios.',
-      image: '/images/event.jpg',
-      link: '#',
-    },
-    {
-      title: 'UP Formaturas',
-      date: '13 de Outubro de 2025',
-      location: 'Florianópolis, SC',
-      description: 'Festas fechadas exclusivamente para formandos, com as melhores atrações, atividades e muitos passeios.',
+      title: 'Baile da Akyam',
+      date: '23 de Novembro de 2024',
+      location: 'Lindoia, SP',
+      description: 'Baile exclusivo e organizado pela Dj Akyam.',
       image: '/images/event.jpg',
       link: '#',
     },
