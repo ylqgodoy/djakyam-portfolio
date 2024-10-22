@@ -53,7 +53,7 @@ app.get('/events', (req, res) => {
     {
       title: 'Baile da Akyam',
       date: '23 de Novembro de 2024',
-      location: 'Lindoia, SP',
+      location: 'Monte Siao, MG',
       description: 'Baile exclusivo e organizado pela Dj Akyam.',
       image: '/images/release.jpg',
       link: '#',
