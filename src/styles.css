@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .neon-text {
+    text-shadow:
+      0 0 5px rgba(233, 30, 99, 0.7),
+      0 0 10px rgba(233, 30, 99, 0.7),
+      0 0 20px rgba(233, 30, 99, 0.7),
+      0 0 40px rgba(233, 30, 99, 0.7);
+  }
+}

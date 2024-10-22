@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+<section class="relative bg-cover bg-center h-screen flex items-center" style="background-image: url('/images/hero.jpg');">
+  <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-80"></div>
+  <div class="container mx-auto relative z-10 text-center text-light animate-fade-in px-4" data-aos="zoom-in">
+    <h1 class="text-5xl md:text-7xl font-display font-bold mb-6 neon-text">DJ Akyam</h1>
+    <p class="text-xl md:text-2xl mb-8">Viva a batida, sinta a energia.</p>
+    <a href="/events" class="inline-block bg-primary text-light px-8 py-4 rounded-full text-lg font-medium hover:bg-secondary transition duration-300">Próximos Eventos</a>
+  </div>
+</section>
+<section class="py-20 bg-gradient-to-b from-gray-900 to-dark px-4">
+  <div class="container mx-auto text-center max-w-screen-lg">
+    <h2 class="text-4xl font-bold mb-12" data-aos="fade-up">Últimos Lançamentos</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <% releases.forEach(release => { %>
+        <div class="bg-dark rounded-lg shadow-lg p-6 hover:shadow-2xl transition duration-300" data-aos="zoom-in">
+          <img src="<%= release.image %>" alt="<%= release.title %>" class="w-full h-64 object-cover rounded-md mb-4">
+          <h3 class="text-2xl font-semibold mb-2"><%= release.title %></h3>
+          <p class="text-gray-400 mb-4"><%= release.description %></p>
+          <a href="<%= release.link %>" class="text-primary hover:underline">Ouça Agora</a>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+<%- include('partials/footer') %>

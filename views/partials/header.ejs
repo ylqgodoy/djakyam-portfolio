@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= title %></title>
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/tailwind.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+</head>
+<body class="bg-dark text-light font-sans flex flex-col min-h-screen">
+  <header class="fixed w-full bg-dark bg-opacity-90 z-50 shadow-lg">
+    <nav class="container mx-auto flex items-center justify-between p-5">
+      <a href="/" class="text-3xl font-display font-bold tracking-wide text-primary neon-text">Akyam</a>
+      <ul class="hidden md:flex space-x-8 text-lg">
+        <li><a href="/" class="hover:text-primary transition duration-300">Início</a></li>
+        <li><a href="/gallery" class="hover:text-primary transition duration-300">Galeria</a></li>
+        <li><a href="/events" class="hover:text-primary transition duration-300">Eventos</a></li>
+        <li><a href="/contact" class="hover:text-primary transition duration-300">Contato</a></li>
+        <li><a href="/about" class="hover:text-primary transition duration-300">Sobre</a></li>
+      </ul>
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-2xl focus:outline-none text-primary">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="hidden bg-dark bg-opacity-95">
+      <ul class="flex flex-col items-center space-y-6 py-6 text-lg">
+        <li><a href="/" class="hover:text-primary transition duration-300">Início</a></li>
+        <li><a href="/gallery" class="hover:text-primary transition duration-300">Galeria</a></li>
+        <li><a href="/events" class="hover:text-primary transition duration-300">Eventos</a></li>
+        <li><a href="/contact" class="hover:text-primary transition duration-300">Contato</a></li>
+        <li><a href="/about" class="hover:text-primary transition duration-300">Sobre</a></li>
+      </ul>
+    </div>
+  </header>
+  <main class="flex-grow pt-24">

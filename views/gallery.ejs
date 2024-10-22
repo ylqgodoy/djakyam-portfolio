@@ -1,0 +1,19 @@
+<%- include('partials/header') %>
+<section class="py-20 bg-gray-900 px-4">
+  <div class="container mx-auto max-w-screen-lg">
+    <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Galeria Exclusiva</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <% imagens.forEach(function(imagem, indice) { %>
+        <div class="group relative overflow-hidden rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="<%= (indice + 1) * 100 %>">
+          <img src="/images/gallery/<%= imagem %>" alt="DJ Akyam Foto <%= indice + 1 %>" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex items-end">
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-light">Momento Especial <%= indice + 1 %></h3>
+            </div>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</section>
+<%- include('partials/footer') %>
