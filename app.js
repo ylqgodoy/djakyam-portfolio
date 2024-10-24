@@ -53,8 +53,8 @@ app.get('/events', (req, res) => {
     {
       id: 1,
       title: 'Baile da Akyam',
-      date: '2024-11-23T20:00:00',
-      location: 'Lindoia, SP',
+      date:   '2024-11-23T21:00:00',
+      location: 'Monte Siao, SP',
       description: 'Baile exclusivo e organizado pela Dj Akyam. Uma noite inesquecível com os melhores hits do funk.',
       image: '/images/hero.jpg',
     },
