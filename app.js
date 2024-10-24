@@ -51,16 +51,33 @@ app.get('/gallery', (req, res) => {
 app.get('/events', (req, res) => {
   const events = [
     {
+      id: 1,
       title: 'Baile da Akyam',
-      date: '23 de Novembro de 2024',
+      date: '2024-11-23T20:00:00',
       location: 'Lindoia, SP',
-      description: 'Baile exclusivo e organizado pela Dj Akyam.',
-      image: '/images/release.jpg',
-      link: '#',
+      description: 'Baile exclusivo e organizado pela Dj Akyam. Uma noite inesquecível com os melhores hits do funk.',
+      image: '/images/hero.jpg',
     },
   ];
 
-  res.render('events', { title: 'DJ Akyam - Eventos', events });
+  const eventHighlights = Array.from({length: 8}, (_, i) => ({
+    id: i + 1,
+    title: `Evento Incrível ${i + 1}`,
+    image: `/images/event-highlight-${i + 1}.jpg`
+  }));
+
+  res.render('events', { title: 'DJ Akyam - Eventos', events, eventHighlights });
+});
+
+app.get('/events/:id', (req, res) => {
+  const eventId = parseInt(req.params.id);
+  const event = events.find(e => e.id === eventId);
+
+  if (event) {
+    res.render('event-details', { title: `DJ Akyam - ${event.title}`, event });
+  } else {
+    res.status(404).send('Evento não encontrado');
+  }
 });
 
 app.get('/contact', (req, res) => {
