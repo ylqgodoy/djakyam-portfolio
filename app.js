@@ -11,10 +11,10 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
   const releases = [
     {
-      title: 'Em breve...',
+      title: 'SET FINAL DE ANO',
       description: '',
       image: '/images/release.jpg',
-      link: '#',
+      link: 'https://soundcloud.com/djakyam/set-final-de-ano',
     },
     {
       title: 'SET CASTIGO DESPENCA NOIA',
